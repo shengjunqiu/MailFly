@@ -7,16 +7,16 @@ function send() {
         port: 465,
         secure: true,
         auth: {
-            user: 'letscuga@foxmail.com',
-            pass: 'pznyttqdqwanbfib'
+            user: '', // 邮箱
+            pass: '' // 授权码
         }
     })
     
     let mailOptions = {
-        from: '"hello world" <letscuga@foxmail.com>',
-        to: '3514509475@qq.com, 2258796445@qq.com, 3498330968@qq.com, 526924883@qq.com, 826941324@qq.com, 2258796445@qq.com, 526924883@qq.com, 344726255@qq.com, 444189486@qq.com, 1130783011@qq.com, 826941324@qq.com',
-        subject: 'hello',
-        text: 'hello'
+        from: '"" <>', // 发件人名称喝地址
+        to: '', // 收件人，可多个，逗号分隔
+        subject: '', // 主题
+        text: 'hello' // 内容
     }
     
     transporter.sendMail(mailOptions, (error, info) => {
